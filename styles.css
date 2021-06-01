@@ -1,0 +1,247 @@
+* {
+    font-family: 'Lato';
+}
+
+body {
+    background-color: rgb(233, 233, 233);
+}
+
+.titulo {
+    font-size: 46px;
+    text-align: center;
+    display: block;
+    margin: 0px 0px 6px 0px;
+}
+
+.box {
+    margin: auto;
+    width: 800px;
+    display: grid;
+    grid-template-columns: 60% 40%
+}
+
+table {
+    width: 100%;
+}
+
+table {page-break-after:always}
+
+table td{
+    border: 5px solid;
+    padding: 30px 10px;
+    font: 400 46px arial;
+    text-align: center;
+}
+
+h1 {
+    font: 400 40px 'Lato';
+    margin-right: 20px;
+}
+
+h4, label {
+    font-size: 26px;
+}
+
+button, h1, h4 {
+    display: inline-block;
+}
+
+button {
+    padding: 7px;
+    font-size: 20px;
+    background-color: rgb(190, 190, 190);
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(158, 158, 158);
+    cursor: pointer;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+textarea, .p, #sacado, #numeros {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+textarea {
+    font-size: 20px;
+}
+
+section, form, #ruleta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 12px ;
+}
+form {
+    height: 400px;
+}
+
+.p {
+    font-size: 15px;
+    margin-top: 50px;
+    padding: 6px;
+    background-color: white;
+    width: 80%;
+    height: 280px;
+    border: solid 1px rgb(117, 117, 117);
+}
+
+p {
+    margin: 2px;
+}
+
+/* BINGO: */
+
+#ruleta {
+    height: 220px;
+    justify-content: space-around;
+}
+
+#ruleta button {
+    font:700 30px "Lato";
+    background-color: #6fbedb;
+}
+
+#ruleta button:hover {
+    background-color: #3c86c7;
+}
+
+#sacado {
+    display: flex;
+    margin-bottom: 6px ;
+}
+
+.cuadrado:first-child {
+    border-right: 0px ;
+}
+.cuadrado {
+    text-align: center;
+    font-size: 120px;
+    border: black 4px solid;
+    padding: 0px;
+    min-width: 105px;
+    min-height: 145px;
+    background-color: azure;
+}
+
+.titulo.bingo {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.contenedor {
+    flex-direction: row;
+    justify-content: space-evenly ;
+}
+
+#numeros {
+    display: grid;
+    height: 400px;
+    width: calc(400px*10/5);
+    grid-template-columns: repeat(10, calc(100%/10));
+    grid-template-rows: repeat(5, 20%);
+    border: black 2px solid;
+    background-color: #6fbedb;
+}
+
+.num {
+    text-align: center;
+    line-height: 80px;
+    font-size:46px;
+    border: black 2px solid;
+}
+
+.num:hover {
+    background-color: #3c86c7;
+}
+
+.num.ocupado {
+    background-color: rgb(37, 79, 146);
+}
+
+.num.ocupado:hover {
+    background-color: rgb(27, 56, 104);
+}
+
+.body {
+    background-color: #c8dce4;
+}
+
+.fondo {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alerta {
+    background-color: rgb(243, 243, 243);
+    padding: 8px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.alerta-titulo {
+    text-align: center;
+    font-size: 60px;
+}
+
+.contenido {
+    text-align: center;
+    font-size: 30px;
+}
+
+.cerrar {
+    align-self: flex-end;
+    justify-self: flex-end ;
+    width: 50px;
+    height: 50px;
+}
+
+.cerrar:hover {
+    cursor: pointer;
+}
+
+.material-icons.md-48 { 
+    font-size: 48px; 
+    background-color: rgb(190, 190, 190);
+}
+
+#file {
+    display: none;
+}
+
+#boton-file {
+    margin-top: 10px;
+}
+
+#text-archivo {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#form {
+    height: 60px;
+}
+
+#mandar-archivo {
+    display: flex;
+    flex-direction: column;
+}
+
+#boton-file.highlight {
+    border-color: purple;
+  }
+
+img {
+    width: 32px;
+}
