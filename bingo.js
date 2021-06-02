@@ -49,7 +49,10 @@ const alerta = document.createElement("div")
 const titulo = document.createElement("h1")
 const contenido = document.createElement("p")
 const botonCerrar = document.createElement("div")
+let audio = new Audio("./Van-Halen-Jump.mp3")
 function alertar(ganadores, posicion) {
+    audio.currentTime = 0
+    audio.play()
     document.body.append(fondo)
     fondo.append(alerta)
     alerta.append(titulo)
@@ -62,11 +65,11 @@ function alertar(ganadores, posicion) {
     botonCerrar.className = "cerrar"
     titulo.innerHTML = "FELICITACIONES!!!"
     if (posicion === 1) {
-        contenido.innerHTML = `En primer lugar... ${listaString(ganadores)}!!`
+        contenido.innerHTML = `<b>En primer lugar</b>... ${listaString(ganadores)}!!`
     } else if(posicion === 2) {
-        contenido.innerHTML = `En segundo lugar... ${listaString(ganadores)}!!!`
+        contenido.innerHTML = `<b>En segundo lugar</b>... ${listaString(ganadores)}!!!`
     } else if(posicion === 3) {
-        contenido.innerHTML = `En tercer lugar... ${listaString(ganadores)}!!!`
+        contenido.innerHTML = `<b>En tercer lugar</b>... ${listaString(ganadores)}!!!`
     }
     botonCerrar.innerHTML = "<span class='material-icons md-48'>done</span>"
 }
@@ -93,16 +96,16 @@ function listaString(lista) {
     if (lista.length === 1) {
         return lista.toString()
     } else {
-        for (let el of lista) {
-            if (lista[lista.length - 2] === el ) {
-                str += el + " y "
-            } else if (lista[lista.length - 1] === el) {
-                str += el
-            }else {
-                str += el + ", "
+        for (let i = 0; i < lista.length; i++) {
+            if (i === lista.length || i === 0) {
+                str += lista[i]
+            } else if (i === lista.length - 1) {
+                str += " y " + lista[i]
+            }  else {
+                str += ", " + lista[i]
             }
         }
-        return str
+            return str
     }
 }
 
@@ -162,5 +165,7 @@ botonCerrar.addEventListener("click", () => {
     finalizar()
     posicion = 5
     lista_nums.push("finalizado")
+    } else {
+        audio.pause()
     }
 })
