@@ -91,6 +91,19 @@ function finalizar() {
     botonNumeros.remove()
 }
 
+const alertaNumero = document.createElement("div")
+const fondoMostrar = document.createElement("div")
+const alertaMostrar = document.createElement("div")
+function mostrarNumero(num) {
+    document.body.append(fondoMostrar)
+    fondoMostrar.append(alertaMostrar)
+    alertaMostrar.append(alertaNumero)
+    fondoMostrar.className = "fondo"
+    alertaMostrar.className = "alerta-mostrar"
+    alertaNumero.className = "alerta-numero"
+    alertaNumero.innerHTML = num
+}
+
 function listaString(lista) {
     let str = ""
     if (lista.length === 1) {
@@ -142,6 +155,9 @@ botonNumeros.addEventListener("click", () => {
         clearInterval(cambioNumero2)
         cuadrado2.innerHTML = str[1]
         casillas[nuevo - 1].classList += " ocupado"
+        mostrarNumero(nuevo)
+        setTimeout( () => {
+        fondoMostrar.remove()
         for (let residente of residentes) {
             residente.numeros = residente.numeros.filter(n => n !== nuevo)
         }
@@ -155,6 +171,7 @@ botonNumeros.addEventListener("click", () => {
             residentes = residentes.filter(res => res.numeros.length !== 0)
             posicion ++
         }
+        }, 3000)
     }, 1700)
     // console.log(residentes)
 })

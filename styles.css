@@ -154,24 +154,33 @@ p {
     border: black 2px solid;
 }
 
-.num:hover {
+.num:hover, .num.ocupado:hover {
     background-color: #3c86c7;
 }
 
 .num.ocupado {
-    background-color: rgb(37, 79, 146);
+    background: 
+        linear-gradient(to top left,
+        rgba(0,0,0,0) 0%,
+        rgba(185, 0, 0, 0) calc(50% - 8px),
+        rgb(158 0 0) 50%,
+        rgba(185,0,0,0) calc(50% + 8px),
+        rgba(0,0,0,0) 100%),
+    linear-gradient(to top right,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0) calc(50% - 8px),
+        rgb(144 0 0) 50%,
+        rgba(0,0,0,0) calc(50% + 8px),
+        rgba(0,0,0,0) 100%)
 }
 
-.num.ocupado:hover {
-    background-color: rgb(27, 56, 104);
-}
 
 .body {
     background-color: #c8dce4;
 }
 
 .fondo {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -181,9 +190,8 @@ p {
     align-items: center;
 }
 
-.alerta {
-    background-image: url("./fiesta.jpg");
-    background-size: cover;
+.alerta, .alerta-mostrar {
+    background: rgb(190, 190, 190);
     padding: 8px;
     width: 60%;
     height: fit-content;
@@ -191,6 +199,16 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+.alerta-mostrar {
+    justify-content: center;
+    max-width: 420px;
+}
+.alerta {
+    background-image: url("./fiesta.jpg");
+    background-size: cover;
     justify-content: space-between;
 }
 
@@ -201,6 +219,14 @@ p {
     text-align: center;
     font-size: 60px;
     margin-top: 18%;
+}
+
+.alerta-numero {
+    background: white;
+    min-width: 380px;
+    text-align: center;
+    border: solid 6px black;
+    font: 400 300px "Lato";
 }
 
 .contenido {
