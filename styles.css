@@ -51,6 +51,7 @@ button {
     font-size: 20px;
     background-color: rgb(190, 190, 190);
     border-radius: 10px;
+    border: solid 2.5px black;
 }
 
 button:hover {
@@ -103,6 +104,7 @@ p {
 #ruleta button {
     font:700 30px "Lato";
     background-color: #6fbedb;
+    margin-top: 4px;
 }
 
 #ruleta button:hover {
@@ -193,9 +195,9 @@ p {
 .alerta, .alerta-mostrar {
     background: rgb(190, 190, 190);
     padding: 8px;
-    width: 60%;
+    width: 70%;
     height: fit-content;
-    min-height: 70%;
+    min-height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,11 +216,11 @@ p {
 
 .alerta-titulo {
     border-radius: 15px;
-    background-color: rgb(243, 243, 243);
+    /* background-color: rgb(243, 243, 243); */
     background-position: center;
     text-align: center;
-    font-size: 60px;
-    margin-top: 18%;
+    font-size: 72px;
+    margin-top: 25%;
 }
 
 .alerta-numero {
@@ -234,6 +236,7 @@ p {
     background-color: rgb(243, 243, 243);
     text-align: center;
     font-size: 30px;
+    padding: 10px;
 }
 
 .cerrar {
@@ -249,7 +252,9 @@ p {
 
 .material-icons.md-48 { 
     font-size: 48px; 
-    background-color: rgb(190, 190, 190);
+    background-color: rgb(41, 186, 53);
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 #file {

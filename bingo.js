@@ -173,7 +173,7 @@ botonNumeros.addEventListener("click", () => {
         }
         }, 3000)
     }, 1700)
-    // console.log(residentes)
+    console.log(residentes)
 })
 
 botonCerrar.addEventListener("click", () => {
